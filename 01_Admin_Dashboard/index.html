@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="mdb.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mdb.css">
 	<link rel="stylesheet" href="styles.css">
-    <title>UiBrains Dashboard</title>
+    <title>HOLA</title>
 </head>
 <body ng-controller="AdminDashboardAppCtrl as ctrl">
 
     <!-- Main Navigation -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg p-3">
         <div class="container">
-            <a href="index.html" class="navbar-brand text-warning">
-               <i class="fa fa-snowflake fa-spin"></i> UiBrains
+            <a href="index.html" class="navbar-brand text-warning animated swing infinite">
+               <i class="fa fa-snowflake fa-spin"></i> HOLA
             </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#uiNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -28,21 +29,20 @@
                     </li>
                     <li class="nav-item">
                         <a href="tasks.html" class="nav-link">
-                            <i class="fa fa-list text-muted"></i> Tasks</a>
+                            <i class="fa fa-camera" aria-hidden="true"></i> Images</a>
                     </li>
                     <li class="nav-item">
                         <a href="categories.html" class="nav-link">
-                            <i class="fa fa-sitemap  text-muted"></i> Categories</a>
+                           <i class="fa fa-play-circle" aria-hidden="true"></i>Videos</a>
                     </li>
                     <li class="nav-item">
                         <a href="employees.html" class="nav-link">
-                            <i class="fa fa-users text-muted"></i> Employees</a>
+                            <i class="fa fa-stop-circle" aria-hidden="true"></i>Audio</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-toggle="dropdown">
-                           <i class="fa fa-sign-in-alt text-muted"></i> Naveen <i class="fa fa-caret-down"></i></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown">Admin</a>
                         <div class="dropdown-menu">
                             <a href="profile.html" class="dropdown-item">
                                <i class="fa fa-user-circle"></i> Profile</a>
@@ -60,7 +60,7 @@
     </nav>
 
     <!-- Dashboard Section -->
-    <section class="bg-teal text-white p-2 animated slideInLeft">
+    <section class="bg-danger text-black p-3 mt-3 animated slideInLeft">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -71,27 +71,27 @@
     </section>
 
     <!-- Buttons Section -->
-    <section class="bg-light p-3 animated slideInRight">
+    <section class="bg-light p-3 mt-3 animated slideInRight">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 p-2">
                     <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tasks-modal">
-                       <i class="fa fa-plus-circle"></i> Add Task</a>
+                       <i class="fa fa-plus-circle"></i> Add Images</a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 p-2">
                     <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#category-modal">
-                        <i class="fa fa-plus-circle"></i> Add Categorie</a>
+                        <i class="fa fa-plus-circle"></i> Add Videos</a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 p-2">
                     <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#employee-modal">
-                        <i class="fa fa-plus-circle"></i> Add Employee</a>
+                        <i class="fa fa-plus-circle"></i> Add Audio</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tasks Modal -->
-    <div class="modal animated slideInLeft" id="tasks-modal">
+    <div class="modal animated bounce" id="tasks-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
@@ -133,7 +133,7 @@
     </div>
 
     <!-- Category Modal -->
-    <div class="modal animated slideInRight" id="category-modal">
+    <div class="modal animated jackInTheBox" id="category-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-success text-white">
@@ -161,7 +161,7 @@
     </div>
 
     <!-- Employee Modal -->
-    <div class="modal animated zoomIn" id="employee-modal">
+    <div class="modal animated lightSpeedIn" id="employee-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-warning text-white">
@@ -192,114 +192,76 @@
     </div>
 
     <!-- Main Dashboard Section -->
-    <section class="p-3">
+    <section class="p-5 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
-                    <div class="card">
-                        <div class="card-header bg-secondary text-white">
-                            <h2>Current Tasks</h2>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>SNO</th>
-                                        <th>Employee</th>
-                                        <th>Email</th>
-                                        <th>Task Name</th>
-                                        <th>Level</th>
-                                        <th>Category</th>
-                                        <th>Details</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="employee in ctrl.employees">
-                                        <td>{{$index + 1}}</td>
-                                        <td>{{employee.employee_name}}</td>
-                                        <td>{{employee.employee_email}}</td>
-                                        <td>{{employee.task_name}}</td>
-                                        <td>{{employee.task_level}}</td>
-                                        <td>{{employee.task_category}}</td>
-                                        <td>
-                                            <a href="#" class="btn btn-outline-secondary btn-sm">More <i class="fa fa-arrow-alt-circle-right"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-center">
+                    <div class="card text-center mt-5 col-md-4">
                         <div class="card-header bg-primary text-white">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center mt-3 animated rotateInDownLeft">
                                 <div class="col">
-                                    <i class="fa fa-list fa-4x"></i>
+                                <i class="fa fa-camera fa-4x" aria-hidden="true"></i>
                                 </div>
                                 <div class="col">
-                                    <h3 class="display-3">{{ctrl.leadingZero(ctrl.employees.length)}}</h3>
-                                    <h3>Tasks</h3>
+                                    <h3 class="display-3 text-center">{{ctrl.leadingZero(ctrl.employees.length)}}</h3>
+                                    <h6>Images</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer mt-3">
                             <h5>
-                                <a href="tasks.html" class="text-primary">View Details <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="tasks.html" class="text-primary">View Images <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
-                    <div class="card text-center mt-4">
+                    <div class="card text-center mt-5 col-md-4">
                         <div class="card-header bg-success text-white">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center mt-3 animated rotateInDownRight">
                                 <div class="col">
-                                    <i class="fa fa-sitemap fa-4x"></i>
+									<i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
                                 </div>
                                 <div class="col">
                                     <h3 class="display-3">{{ctrl.leadingZero(ctrl.categories.length)}}</h3>
-                                    <h6>Categories</h6>
+                                    <h6>Videos</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer mt-3">
                             <h5>
-                                <a href="categories.html" class="text-success">View Details <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="categories.html" class="text-success">View Videos <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
-                    <div class="card text-center mt-4">
+                    <div class="card text-center mt-5 col-md-4">
                         <div class="card-header bg-warning text-white">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center mt-3 animated rotateInUpLeft">
                                 <div class="col">
-                                    <i class="fa fa-users fa-4x"></i>
+                                    <i class="fa fa-stop-circle fa-4x" aria-hidden="true"></i>
                                 </div>
                                 <div class="col">
                                     <h3 class="display-3">{{ctrl.leadingZero(ctrl.employees.length)}}</h3>
-                                    <h6>Employees</h6>
+                                    <h6>Audio</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer mt-3">
                             <h5>
-                                <a href="employees.html" class="text-warning">View Details <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="employees.html" class="text-warning">View Audios <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
-
     <!-- Main Footer -->
-    <footer class="bg-dark p-3 text-white text-center">
+    <footer class="bg-dark p-2 mt-5 text-white text-center">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <h3>Copyright &copy; 2018, UiBrains.com</h3>
                     <p>All Rights Reserved</p>
                     <p>Developed & Maintained by
-                        <a class="text-warning" href="https://github.com/thenaveensaggam" target="_blank">
-                            <i class="fa fa-user-circle"></i> Naveen Saggam
+                        <a class="text-warning" href="https://github.com/chaitanya557" target="_blank">
+                            <i class="fa fa-user-circle"></i> D.Chaitanya
                         </a>
                     </p>
                 </div>
@@ -311,14 +273,12 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <!-- BODY ENDS -->
-<script src="../bootstrap/js/fontawesome-all.js"></script>
-<script src="../bootstrap/js/jquery-3.2.1.min.js"></script>
-<script src="../bootstrap/js/popper.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../bootstrap/js/mdb.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
-<script src="../angular/angular.js"></script>
-<script src="app.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script src="app2.js"></script>
 <script>
     CKEDITOR.replace( 'editor1' );
 </script>
