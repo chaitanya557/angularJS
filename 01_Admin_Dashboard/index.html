@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="audio.html" class="nav-link">
-                            <i class="fa fa-stop-circle" aria-hidden="true"></i>Audio</a>
+                            <i class="fa fa-stop-circle" aria-hidden="true"></i>Audios</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -75,27 +75,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 p-3">
-                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tasks-modal">
+                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#image-modal">
                        <i class="fa fa-plus-circle"></i> Add Images</a>
                 </div>
                 <div class="col-md-4 p-3">
-                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#category-modal">
+                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#video-modal">
                         <i class="fa fa-plus-circle"></i> Add Videos</a>
                 </div>
                 <div class="col-md-4 p-3">
-                    <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#employee-modal">
+                    <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#audio-modal">
                         <i class="fa fa-plus-circle"></i> Add Audio</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tasks Modal -->
-    <div class="modal animated bounce" id="tasks-modal">
+    <!-- Image Modal -->
+    <div class="modal animated bounce" id="image-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h3>Add Task</h3>
+                    <h3>Add Image</h3>
                     <button class="close text-white" data-dismiss="modal">
                         <i class="fa fa-window-close"></i>
                     </button>
@@ -103,19 +103,8 @@
                 <form>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Title">
-                        </div>
-                        <div class="form-group">
-                            <label>Category</label>
-                            <select class="form-control">
-                                <option ng-repeat="category in ctrl.categories">
-                                    {{category.category_name}}
-                                </option>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label>Image Upload</label>
-                            <input type="file" class="form-control-file">
+                            <input type="file" class="form-control-file bg-primary">
                             <small class="text-muted">Max Size 3MB</small>
                         </div>
                         <div class="form-group">
@@ -125,66 +114,67 @@
                     </div>
                     <div class="modal-footer">
                         <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
-                        <input type="submit" value="ADD TASK" class="btn btn-primary">
+                        <input type="submit" value="ADD IMAGE" class="btn btn-primary">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Category Modal -->
-    <div class="modal animated jackInTheBox" id="category-modal">
+    <!-- video Modal -->
+    <div class="modal animated jackInTheBox" id="video-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-success text-white">
-                    <h3>Add Category</h3>
+                    <h3>Add Videos</h3>
                     <button class="close text-white" data-dismiss="modal">
                         <i class="fa fa-window-close"></i>
                     </button>
                 </div>
-                <form>
+               <form>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input ng-model="ctrl.category_name" type="text" class="form-control" placeholder="Category Name">
+                            <label>Video Upload</label>
+                            <input type="file" class="form-control-file bg-success">
                         </div>
                         <div class="form-group">
-                            <input type="date" class="form-control">
+                            <label>Description</label>
+                            <textarea class="form-control" name="editor2"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
-                        <button ng-click="ctrl.addCategory()" type="button" class="btn btn-success"> Add Category</button>
+                        <input type="submit" value="ADD VIDEO" class="btn btn-primary">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Employee Modal -->
-    <div class="modal animated lightSpeedIn" id="employee-modal">
+    <!-- Audio Modal -->
+    <div class="modal animated lightSpeedIn" id="audio-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-warning text-white">
-                    <h3>Add Employee</h3>
+                    <h3>Add Audio</h3>
                     <button class="close text-white" data-dismiss="modal">
                         <i class="fa fa-window-close"></i>
                     </button>
                 </div>
-                <form>
+              <form>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Employee Name">
+                            <label>Audio Upload</label>
+                            <input type="file" class="form-control-file bg-primary">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Employee Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Default Password">
+                            <label>Description</label>
+                            <textarea class="form-control" name="editor3"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
-                        <input type="submit" value="ADD Employee" class="btn btn-warning">
+                        <input type="submit" value="ADD AUDIO" class="btn btn-primary">
                     </div>
                 </form>
             </div>
@@ -209,7 +199,7 @@
                         </div>
                         <div class="card-footer mt-3">
                             <h5>
-                                <a href="tasks.html" class="text-primary">View Images <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="images.html" class="text-primary">View Images <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
@@ -227,7 +217,7 @@
                         </div>
                         <div class="card-footer mt-3">
                             <h5>
-                                <a href="categories.html" class="text-success">View Videos <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="videos.html" class="text-success">View Videos <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
@@ -245,7 +235,7 @@
                         </div>
                         <div class="card-footer mt-3">
                             <h5>
-                                <a href="employees.html" class="text-warning">View Audios <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="audio.html" class="text-warning">View Audios <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
@@ -253,7 +243,7 @@
         </div>
     </section>
     <!-- Main Footer -->
-    <footer class="bg-dark p-2 mt-5 text-white text-center">
+    <footer class="bg-dark p-1 mt-5 text-white text-center">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -281,6 +271,8 @@
 <script src="app2.js"></script>
 <script>
     CKEDITOR.replace( 'editor1' );
+	 CKEDITOR.replace( 'editor2' );
+	  CKEDITOR.replace( 'editor3' );
 </script>
 </body>
 </html>
